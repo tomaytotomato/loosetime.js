@@ -8,22 +8,60 @@
 *
 */
 /*
- * Parses datetime given by user
- * Not implemented
+ * Parses datetime given by user and provides a string to be used for validation
+ * e.g. for DD/MM/YYYY HH24:mm:SS.s --> 31/12/2999 23:59:59:9999
  */
 function parseDateTime(parseStr)
 {
-
-	var res = parseStr.split(/[\/:.\s]/g);
-	var valid = "";
-	for (var i = 0; i < res.length; i++)
+	var validString = "";
+	var res = parseStr.split(/[\/\/:.\s]/g);
+	console.log(res.length);
+	for(var i = 0; i < res.length; i++)
 	{
-		// console.log(res[i]);
-
+		console.log(res[i]);
+		switch(res[i])
+		{
+			case "DD":
+			validString += "31";
+			break;
+			
+			case "MM":
+			validString += "12";
+			break;
+			
+			case "YY": 
+			validString += "99";
+			break;
+			
+			case "YYYY":
+			validString += "2999";
+			break;
+			
+			case "HH24":
+			validString += "23";
+			break;
+			
+			case "HH12": 
+			validString += "11";
+			break;
+			
+			case "mm": 
+			validString += "59";
+			break;
+			
+			case "SS":
+			validString += "59";
+			break;
+			
+			case "s":
+			validString += "99";
+			break;	
+		}
+		//add delimiter
+		validString += "/";	
 	}
-	// build a string with max values e.g. for DD/MM/YYYY
-	// HH24:mm:SS.s 31/12/2999 23:59:59:9999
-
+	
+	return validString;
 }
 
 /*
@@ -113,7 +151,11 @@ function loosetime(a, b, c, d)
 
 		if (typeof(format) == 'undefined')
 		{
-			format = "HH24:MM:SS.s";
+			format = parseDateTime("DD/MM/YY HH24:MM:SS.s");
+		}
+		else
+		{
+			format = parseDateTime(format);
 		}
 
 		// check newVal given
@@ -121,8 +163,8 @@ function loosetime(a, b, c, d)
 		{
 			if (typeof(newVal) == 'undefined')
 			{
-				newVal = 'DD/MM/YY 00:00.0';
-				newSize = 13;
+				newVal = 'DD/MM/YY 00:00.00';
+				newSize = 15;
 			}
 
 			// construct input element
