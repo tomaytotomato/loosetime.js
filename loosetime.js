@@ -96,44 +96,61 @@ function dateTimeRules(event, f)
 		var sel = $(this).prop('selectionStart');
 		var val = $(this).val();
 		explode = val.split("");
+		var input = event.charCode - 48;
 		if(sel <= $(this).prop('maxlength')+1)
 		{
 			// get value of char pos in loosetime attribute
+			
 			var thisChar = $(this).attr('loosetime').charAt(sel);
 			// if position is on delimiter, jump to next position
 			
-			if ($.inArray(explode[sel], delims) != -1)
-			{
-				 explode = val.split("");
-				 explode[sel+1] = event.charCode - 48;
-				 val = explode.join("");
-				 newsel = sel + 2;
-			}
-				
-			//move cursor to next position
-			else
-			{
-				// if input value > loosetime char, prevent movement
 			
-				//replace char infront of cursor pos
-				explode = val.split("");
-				explode[sel] = event.charCode - 48;
-				val = explode.join("");
-				newsel = sel + 1;
+			if((event.charCode - 48) <= thisChar)
+			{
+					if ($.inArray(explode[sel], delims) != -1)
+					{
+						 explode = val.split("");
+						 explode[sel+1] = event.charCode - 48;
+						 val = explode.join("");
+						 newsel = sel + 2;
+					}
+						
+					//move cursor to next position
+					else
+					{
+						// if input value > loosetime char, prevent movement
 					
-			
-			}			
-				
-			$(this).prop({
-							value : val,
-							selectionStart : newsel,
-							selectionEnd : newsel
+						//replace char infront of cursor pos
+						explode = val.split("");
+						explode[sel] = event.charCode - 48;
+						val = explode.join("");
+						newsel = sel + 1;
 							
-						});
-			}
-			// non numeric chars will be ignored, input cursor pos will stay		
+					
+					}			
+						
+					$(this).prop({
+									value : val,
+									selectionStart : newsel,
+									selectionEnd : newsel
+									
+								});
+					}
+					else
+					{
+						window.alert("Invalid input, the maximum value you can enter is " + thisChar + "\n"
+						+ " you entered " + input);
+					
+					
+					}
+					
+					// non numeric chars will be ignored, input cursor pos will stay		
+					
+					
 		}	
-}
+	}		
+}	
+
 
 // takes datetime format, append location, name, value
 function loosetime(a, b, c, d)
