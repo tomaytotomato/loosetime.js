@@ -22,11 +22,10 @@ function loosetime(a,b,c,d)
 
 		var format = a;
 		var appendLoc = b;
-		var newVal = c;
-		var newName = d;
+		var newName = c;
+		var newVal = d;
 		var newSize;
-				
-		console.log(typeof(format));
+
 		// parse the time format passed in
 		try
 		{
@@ -39,9 +38,7 @@ function loosetime(a,b,c,d)
 			{
 				format = parseDateTime(format);
 			}
-			
-			console.log(format);
-			
+
 			// check newVal given
 			try
 			{
@@ -49,10 +46,6 @@ function loosetime(a,b,c,d)
 				{
 					newVal = "DD/MM/YY 00:00.00";
 					newSize = 15;
-				}
-				else
-				{
-					newSize = newVal.length;
 				}
 
 				// construct input element
@@ -68,10 +61,7 @@ function loosetime(a,b,c,d)
 						loosetime : format
 					}
 					);
-				
-				console.log(newVal);
-				console.log(newSize);
-				
+
 				// append loosetime to the designated element in the DOM
 				try
 				{
@@ -106,10 +96,10 @@ function loosetime(a,b,c,d)
 	{
 		var validString = "";
 		var res = parseStr.split(/[\/\/:.\s]/g);
-		//console.log(res.length);
+		console.log(res.length);
 		for (var i = 0; i < res.length; i++)
 		{
-			//console.log(res[i]);
+			console.log(res[i]);
 			switch (res[i])
 			{
 			case "DD":
