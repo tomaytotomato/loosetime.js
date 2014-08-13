@@ -5,6 +5,8 @@
  *	URL: www.loosetime.com
  *	Date: 22/07/2014
  *	License: MIT License, open source
+ *
+ * - NOTE - Still need to refactor out the jQuery in this version -
  */
 
 (function(){
@@ -48,13 +50,11 @@ function loosetime(a,b,c,d)
 				if (typeof(newVal) == 'undefined')
 				{
 					newVal = "DD/MM/YY 00:00.00";
-					newSize = 15;
+					
 				}
-				else
-				{
-					newSize = newVal.length;
-				}
-
+				
+				newSize = newVal.length-2;
+				
 				// construct input element
 				var input = $("<input>",
 					{
@@ -69,8 +69,6 @@ function loosetime(a,b,c,d)
 					}
 					);
 				
-				console.log(newVal);
-				console.log(newSize);
 				
 				// append loosetime to the designated element in the DOM
 				try
