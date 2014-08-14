@@ -9,33 +9,32 @@
  * - NOTE - Still need to refactor out the jQuery in this version -
  */
 
-(function(){
-	config(
-		{
-			"format" : "DD/MM/YY HH24:MM:SS.s",
-			"value" : "DD/MM/YY 00:00.00",
-			"length" : 13,
-		}
-	);
-})
+var looseconfig = 
+{
+	//change these values to set how loosetime creates default input elements
+	"format" : "DD/MM/YY HH24:MM:SS.s",
+	"value" : "DD/MM/YY 00:00.00",
+	"class" : "input"
+};
 
-function loosetime(a,b,c,d)
+ 
+function loosetime(a,b,c,d,e)
 {
 
 		var format = a;
 		var appendLoc = b;
-		var newVal = c;
-		var newName = d;
-		var newSize;
+		var inputVal = c;
+		var inputName = d;
+		var inputClass = e;
+		var inputLength;
 				
-		console.log(typeof(format));
 		// parse the time format passed in
 		try
 		{
 
 			if (typeof(format) == 'undefined')
 			{
-				format = parseDateTime("DD/MM/YY HH24:MM:SS.s");
+				format = looseconfig.format;
 			}
 			else
 			{
@@ -44,47 +43,45 @@ function loosetime(a,b,c,d)
 			
 			console.log(format);
 			
-			// check newVal given
+			// check inputVal given
 			try
 			{
-				if (typeof(newVal) == 'undefined')
+				if (typeof(inputVal) == 'undefined')
 				{
-					newVal = "DD/MM/YY 00:00.00";
-					
+					inputVal = looseconfig.value;
 				}
 				
-				newSize = newVal.length-2;
+				inputLength = inputVal.length-2;
 				
 				// construct input element
 				var input = $("<input>",
-					{
-						name : newName,
-						maxlength : newSize,
-						size : newSize,
-						type : 'text',
-						value : newVal,
-						keypress : dateTimeRules,
-						click : resetCursosPos,
-						loosetime : format
-					}
-					);
-				
+								{
+									name : inputName,
+									maxlength : inputLength,
+									size : inputLength,
+									type : 'text',
+									value : inputVal,
+									class : inputClass,
+									keypress : dateTimeRules,
+									click : resetCursosPos,
+									loosetime : format
+								}
+							);
 				
 				// append loosetime to the designated element in the DOM
 				try
 				{
-					var col = document.getElementById('demotime');
-					input.appendTo(col);
+					var element = document.getElementById(appendLoc);
+					input.appendTo(element);
 				}
-				// catch omition of append location
+				// catch omission of append location
 				catch (e)
 				{
-					window.alert("Error, no Element given to append loosetime to.")
-
+					window.alert("Error, no DOM element given to append loosetime input to.");
 				}
 			}
 
-			// catch newVal exception
+			// catch inputVal exception
 			catch (e)
 			{
 				window.alert("Error, Value is invalid." + e.toString());
