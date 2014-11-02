@@ -15,14 +15,14 @@ var looseconfig =
     "delims" : new Array('/', '-', '_', '.', '|', ',', ' ', ':')
 };
 
-function loosetime(a, b, c, d)
+function loosetime(a, b, c, d, e)
 	{
 		
 		var format = a;
 		var appendLoc = b;
 		var inputVal = c;
 		var inputName = d;
-		var inputClass = "input";
+		var inputClass = e;
 		var inputLength;
 		
 		// parse the time format passed in
