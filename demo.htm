@@ -1,24 +1,86 @@
-
+<!DOCTYPE html>
 <html>
 <head>
 	<script type="text/javascript" src="loosetime.js"></script>
 	<!--
 	<script type="text/javascript" src="loosetime_jquery.js"></script>
 	!-->
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	
+	<title>loosetime.js Demo Page</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Demo page showing examples of how to use loosetime.js">
+	<meta name="keywords" content="Javascript,js,loosetime">
+	<meta name="author" content="Bruce Taylor">
+	<style type="text/css">
+		#wrapper	
+		{
+			width: 60%; 
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;		
+		}
+		.example
+		{
+			width: 100%;
+			display: block;
+			border: 1px solid black;
+			height: 25px;
+			margin-bottom: 50px;
+		}
+		
+		.code
+		{
+			float: right;
+			height: 35px;
+			padding: 5px;
+			border: 1px solid black;
+			background-color: #86FF94;
+			font-weight: bold;
+		}
+		
+		p .code
+		{
+			margin: none;
+		}
+		
+		footer
+		{
+			text-align: center;
+		}
+	
+	</style>
 </head>
 <body>
-	
-	
-	<h1>Loosetime</h1>
-	
-	<div id="demotime" name="demotime">
-
+	<div id="wrapper">
+		<h1>Loosetime</h1>
+		<div id="demotime" class="example">
+			<script type="text/javascript">
+				loosetime("HH24:mm:SS", "demotime", "13:03:03", "example1");
+			</script>
+			<div id="code1" class="code">
+				<p>loosetime("HH24:mm:SS", "demotime", "13:03:03");</p>
+			</div>
+		</div>
+		
+		<div id="demotime2" class="example">
+			<script type="text/javascript">
+				loosetime("HH12:mm:SS", "demotime2", "08:24:55", "example2");
+			</script>
+			<div id="code2" class="code">
+				loosetime("HH12:mm:SS", "demotime2", "08:24:55");
+			</div>
+		</div>
+		
+			<div id="demotime3" class="example">
+			<script type="text/javascript">
+				loosetime("DD/MM/YYYY", "demotime3", "DD/MM/YYYY", "example3");
+			</script>
+			<div id="code3" class="code">
+				loosetime("DD/MM/YYYY", "demotime3", "DD/MM/YYYY");
+			</div>
+		</div>
 	</div>
-	<script type="text/javascript">
-		loosetime();
-		loosetime("HH24:mm:SS", "demotime", "13:03:03");
-		loosetime("HH12:mm:SS", "demotime", "09:12:53");
-	</script>
+	
+	<footer>Copyright MIT License , Bruce Taylor</footer>
 </body>
 </html>
