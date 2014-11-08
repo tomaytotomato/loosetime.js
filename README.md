@@ -3,7 +3,7 @@
 
 ##About
 
-loosetime.js provides users with the ability to enter Dates and Times without having to worry about the formatting.
+loosetime.js provides users with the ability to enter Dates and Times without having to worry about the formatting or navigating a Datetime picker.
 
 ## Motivation
 
@@ -15,9 +15,9 @@ loosetime.js lets you just enter the date or time without having to worry.
 
 ## Code Example
 
-`loosetime("format", "location to append", "value", "element name");`
+`loosetime("date/time format", "location to append to on DOM", "pre set value", "element name", "class name");'
 
-`loosetime("HH24:mm:SS", "demotime", "13:03:03");`
+`loosetime("HH24:mm:SS", "form1", "15:34:03", "time1", "input_class");`
 
 
 ## Installation
@@ -26,7 +26,7 @@ For the vanilla version:
 
 Download loosetime.js and reference it in your HTML head like so
 
-`<script type="text/javascript" src="loosetime.js"></script>`
+`<script type="text/javascript" src="<path>/loosetime.js"></script>`
 
 For the jQuery version:
 
@@ -38,3 +38,7 @@ Download loosetime_jquery.js and reference it along with jQuery 1.9.1 , as below
 ## License
 
 MIT License
+
+## Contact
+
+loosebruce.co.uk
