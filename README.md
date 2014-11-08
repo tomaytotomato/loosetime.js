@@ -15,10 +15,20 @@ loosetime.js lets you just enter the date or time without having to worry.
 
 ## Code Example
 
-`loosetime("date/time format", "location to append to on DOM", "pre set value", "element name", "class name");'
+loosetime.js currently uses 5 parameters for it to work properly:
+
+`loosetime("date/time format", "location to append to on DOM", "pre set value", "element name", "class name");`
+
+e.g.
 
 `loosetime("HH24:mm:SS", "form1", "15:34:03", "time1", "input_class");`
 
+
+## Datetime string components
+
+HH24, HH12, MM, SS, S
+
+DD, mm, YYYY
 
 ## Installation
 
