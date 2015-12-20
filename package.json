@@ -1,0 +1,30 @@
+{
+  "name": "loosetime.js",
+  "version": "1.0.0",
+  "description": "A library that allows users to directly type their dates and times without worrying about formatting and validation.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bat26/loosetime.js.git"
+  },
+  "keywords": [
+    "datetime",
+    "time",
+    "date",
+    "input",
+    "formatter",
+    "yolo"
+  ],
+  "author": "Bruce Taylor <brucetaylor88@gmx.com> (brucetaylor.xyz)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bat26/loosetime.js/issues"
+  },
+  "homepage": "https://github.com/bat26/loosetime.js#readme"
+}

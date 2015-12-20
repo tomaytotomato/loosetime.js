@@ -40,7 +40,7 @@ Download loosetime.js and reference it in your HTML head like so
 
 For the jQuery version:
 
-Download loosetime_jquery.js and reference it along with jQuery 1.9.1 , as below
+Download loosetime.jquery.js and reference it along with jQuery 1.9.1 , as below
 
 `<script type="text/javascript" src="loosetime.js"></script>`
 `<script src="http://code.jquery.com/jquery-1.9.1.js"></script>`
