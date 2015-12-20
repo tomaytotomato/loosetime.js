@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/bat26/loosetime.js/issues"
   },
-  "homepage": "https://github.com/bat26/loosetime.js#readme"
+  "homepage": "https://github.com/bat26/loosetime.js#readme",
+  "dependencies": {
+    "mocha": "^2.3.4"
+  }
 }

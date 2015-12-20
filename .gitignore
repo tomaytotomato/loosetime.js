@@ -3,3 +3,5 @@
 .settings/org.eclipse.wst.jsdt.ui.superType.name
 .project
 loosetime_src.js
+node_modules
+.idea
