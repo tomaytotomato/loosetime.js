@@ -1,118 +1,131 @@
 <!DOCTYPE html>
-<html style="padding-right: 0px;"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"><meta charset="utf-8">
+<html style="padding-right: 0px;">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="pragma" content="no-cache">
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<meta charset="UTF-8">
-<meta name="description" content="Demo page showing examples of how to use loosetime.js">
-<meta name="keywords" content="Javascript,js,loosetime">
-<meta name="author" content="Bruce Taylor">
-<title>loosetime.js</title>
-<script type="text/javascript" src="https://cdn.rawgit.com/loosebruce/loosetime.js/master/loosetime.js"></script>
-<link rel="shortcut icon" href="demo/favicon.ico">
-<link rel="stylesheet" href="demo/main.css">
-<!--[if lt IE 9]>
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="Demo page showing examples of how to use loosetime.js">
+    <meta name="keywords" content="Javascript,js,loosetime">
+    <meta name="author" content="Bruce Taylor">
+    <title>loosetime.js</title>
+    <script type="text/javascript" src="src/loosetime.js"></script>
+    <link rel="shortcut icon" href="demo/favicon.ico">
+    <link rel="stylesheet" href="demo/main.css">
+    <!--[if lt IE 9]>
     <script>document.createElement('section')</script>
-<![endif]-->
+    <![endif]-->
 </head>
 <body>
 
-        
+
 <div class="section__block text-center">
     <h1 class="heading heading--splash">loosetime.js</h1>
     <h2 class="heading heading--thin">The sensible and easy way to input dates or times on a website.</h2>
-    <h3 class="heading heading--thin"><a class="button" href="https://github.com/loosebruce/loosetime.js/archive/master.zip">Download the latest loosetime.js</a></h3>
+    <h3 class="heading heading--thin"><a class="button"
+                                         href="https://github.com/bat26/loosetime.js/" target="_blank">Download
+        the latest loosetime.js</a></h3>
     <div class="groupset groupset--splash">
-        <span class="groupset__item"><iframe src="http://ghbtns.com/github-btn.html?user=loosebruce&repo=loosetime.js&type=watch&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="30"></iframe></span>
-        <span class="groupset__item"><iframe src="http://ghbtns.com/github-btn.html?user=loosebruce&repo=loosetime.js&type=fork&count=true"
-  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="30"></iframe></span>
-		 <span class="groupset__item"><script src="http://platform.linkedin.com/in.js" type="text/javascript">
-  lang: en_US
-</script>
-<script type="IN/Share" data-counter="right"></script></span>
-  
+        <span class="groupset__item"><iframe
+                src="http://ghbtns.com/github-btn.html?user=bat26&repo=loosetime.js&type=watch&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="110" height="30"></iframe></span>
+        <span class="groupset__item"><iframe
+                src="http://ghbtns.com/github-btn.html?user=bat26&repo=loosetime.js&type=fork&count=true"
+                allowtransparency="true" frameborder="0" scrolling="0" width="110" height="30"></iframe></span>
+        <span class="groupset__item">
+            <script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+            <script type="IN/Share" data-counter="right"></script>
+        </span>
+        <span class="groupset__item">
+                <script type="text/javascript" src="//www.redditstatic.com/button/button1.js"></script>
+        </span>
     </div>
 </div> <!-- .section__block -->
 
 
-    </header> <!-- .section -->
-
-
-    
+</header> <!-- .section -->
 
 
 <section class="section">
 
     <div class="section__block section__block--scoped">
-		
-		  <div class="heading--three">
+
+        <div class="heading--three">
             <p>Datetime pickers are great for when you don't exactly know what Date or Time you are wanting.</p>
-			<p>However in situations were you know the date e.g. (your date of birth), they can be a real hindrance.</p>
-			<p>For situations like that, loosetime.js lets you just enter the date or time without having to worry about formatting or validation.</p>
-			<p>Giving users a much more enjoyable experience completing this information.</p>
+            <p>However in situations were you know the date e.g. (your date of birth), they can be a real hindrance.</p>
+            <p>For situations like that, loosetime.js lets you just enter the date or time without having to worry about
+                formatting or validation.</p>
+            <p>Giving users a much more enjoyable experience completing this information.</p>
         </div>
-		
-		
-        <h2 class="heading heading--one heading--divide heading--divide-first"><span class="heading__text">Demo<a class="heading__anchor" name="demo" href="#demo">§</a></span></h2>
+
+
+        <h2 class="heading heading--one heading--divide heading--divide-first"><span class="heading__text">Demo<a
+                class="heading__anchor" name="demo" href="#demo">§</a></span></h2>
 
         <pre style="" class="pre--demo"><code class="rainbow" data-language="javascript"><span class="comment">// 24hour time in HH24:mm:SS</span>
-<span class="function call">loosetime</span>("HH24:mm:SS", "element1", "13:03:03");</code></pre>
-      
-		<fieldset class="fieldset fieldset--demo" id="element1">
-		</fieldset>
-		 <script type="text/javascript">
-				loosetime("HH24:mm:SS", "element1", "13:03:03", "example1", 'fieldset__input');
-			</script>
+            <span class="function call">loosetime</span>("HH24:mm:SS", "element1", "13:03:03");</code></pre>
+
+        <fieldset class="fieldset fieldset--demo" id="element1">
+        </fieldset>
+        <script type="text/javascript">
+            loosetime("HH24:mm:SS", "element1", "13:03:03", "example1", 'fieldset__input');
+        </script>
         <pre style="" class="pre--demo"><code class="rainbow" data-language="javascript"><span class="comment">// Date input in DD/MM/YYYY format</span>
-<span class="function call">loosetime</span>("DD/MM/YYYY", "element2", "DD/MM/YYYY");</code></pre>
-       
-		<fieldset class="fieldset fieldset--demo" id="element2">
-		</fieldset>
-		<script type="text/javascript">
-				loosetime("DD/MM/YYYY", "element2", "DD/MM/YYYY", "example2", 'fieldset__input');
-			</script>
+            <span class="function call">loosetime</span>("DD/MM/YYYY", "element2", "DD/MM/YYYY");</code></pre>
+
+        <fieldset class="fieldset fieldset--demo" id="element2">
+        </fieldset>
+        <script type="text/javascript">
+            loosetime("DD/MM/YYYY", "element2", "DD/MM/YYYY", "example2", 'fieldset__input');
+        </script>
 		<pre style="" class="pre--demo"><code class="rainbow" data-language="javascript"><span class="comment">//Full Date and Time DD/MM/YYYY HH12:mm:SS</span>
-<span class="function call">loosetime</span>("DD/MM/YYYY HH12:mm:SS", "element3", "DD/MM/YYYY HH12:mm:SS");</code></pre>
-      
-		<fieldset class="fieldset fieldset--demo" id="element3">
-		</fieldset>
-		 <script type="text/javascript">
-				loosetime("DD/MM/YYYY HH12:mm:SS", "element3", "DD/MM/YYYY HH:mm:SS", "example3", 'fieldset__input');
-			</script>
-     
+            <span class="function call">loosetime</span>("DD/MM/YYYY HH12:mm:SS", "element3", "DD/MM/YYYY HH12:mm:SS");</code></pre>
+
+        <fieldset class="fieldset fieldset--demo" id="element3">
+        </fieldset>
+        <script type="text/javascript">
+            loosetime("DD/MM/YYYY HH12:mm:SS", "element3", "DD/MM/YYYY HH:mm:SS", "example3", 'fieldset__input');
+        </script>
+
     </div> <!-- .section__block -->
 
     <div class="section__block section__block--scoped">
 
-        <h2 class="heading heading--one heading--divide"><span class="heading__text">Features<a class="heading__anchor" name="features" href="#features">§</a></span></h2>
+        <h2 class="heading heading--one heading--divide"><span class="heading__text">Features<a class="heading__anchor"
+                                                                                                name="features"
+                                                                                                href="#features">§</a></span>
+        </h2>
 
         <div class="heading--three">
             <ul class="list list--checked">
                 <li>Vanilla Javascript version</li>
-                <li>jQuery version, soon to be a plugin!</small></li>
                 <li>Small file size</li>
-                <li>Customizable</li>
+                <li>Configurable</li>
             </ul>
         </div>
-	
-	<h2 class="heading heading--one heading--divide"><span class="heading__text">To-do<a class="heading__anchor" name="features" href="#features">§</a></span></h2>
-	<div class="heading--three">
+
+        <h2 class="heading heading--one heading--divide"><span class="heading__text">To-do<a class="heading__anchor"
+                                                                                             name="to_do" href="#to_do">§</a></span>
+        </h2>
+        <div class="heading--three">
             <ul>
+                <li>jQuery version, soon to be a plugin!</small></li>
                 <li>API Doc</li>
                 <li>Full Date and Time validation</li>
-      
+
             </ul>
         </div>
-	
+
     </div> <!-- .section__block -->
 
     <div class="section__block section__block--scoped">
 
-        <h2 class="heading heading--one heading--divide"><span class="heading__text">Browser Support<a class="heading__anchor" name="browser-support" href="#browser-support">§</a></span></h2>
+        <h2 class="heading heading--one heading--divide"><span class="heading__text">Browser Support<a
+                class="heading__anchor" name="browser-support" href="#browser-support">§</a></span></h2>
 
         <p class="heading--three">Supports all modern browsers – and IE8+.</p>
 
@@ -120,29 +133,35 @@
 
     <div class="section__block section__block--scoped">
 
-        <h2 class="heading heading--one heading--divide"><span class="heading__text">Community<a class="heading__anchor" name="community" href="#community">§</a></span></h2>
+        <h2 class="heading heading--one heading--divide"><span class="heading__text">Community<a class="heading__anchor"
+                                                                                                 name="community"
+                                                                                                 href="#community">§</a></span>
+        </h2>
 
-        <p class="heading--three"><i><b>loostime</b>.js</i> is an open source project, shared under an <a href="https://github.com/loosebruce/loosetime.js/blob/master/LICENSE">MIT license</a>. All <a href="https://github.com/loosebruce/loosetime.js">code</a> and <a href="https://github.com/loosebruce/loosetime.js/issues">discussions</a> are hosted on Github.</p>
+        <p class="heading--three"><i><b>loosetime</b>.js</i> is an open source project, shared under an <a
+                href="https://github.com/bat26/loosetime.js/blob/master/LICENSE">MIT license</a>. All <a
+                href="https://github.com/bat26/loosetime.js">code</a> and <a
+                href="https://github.com/bat26/loosetime.js/issues">discussions</a> are hosted on Github.</p>
 
     </div> <!-- .section__block -->
 
 </section> <!-- .section -->
 
 
+<footer class="section section--footer">
 
+    <div class="section__block section__block--scoped text-center">
+        <h2 class="heading heading--one heading--divide-center"></h2>
+        <p class="heading heading--three heading--thin">Made by <a target="_blank" href="http://brucetaylor.xyz">Bruce
+            Taylor</a></p>
+        <p>Code licensed under <a href="https://github.com/bat26/loosetime.js/blob/master/LICENSE">MIT</a></p>
+        <div class="text-tiny text-dimmed">
+            <p>Syntax highlighting with <a href="http://craig.is/making/rainbows">Rainbow.js</a></p>
 
-    <footer class="section section--footer">
+        </div>
+    </div> <!-- .section__block -->
 
-        <div class="section__block section__block--scoped text-center">
-            <h2 class="heading heading--one heading--divide-center"></h2>
-            <p class="heading heading--three heading--thin">Made by <a target="_blank" href="http://loosebruce.co.uk">Bruce Taylor</a></p>
-            <p>Code licensed under <a href="https://github.com/loosebruce/loosetime.js/blob/master/LICENSE">MIT</a></p>
-            <div class="text-tiny text-dimmed">
-                <p>Syntax highlighting with <a href="http://craig.is/making/rainbows">Rainbow.js</a></p>
-  
-            </div>
-        </div> <!-- .section__block -->
+</footer> <!-- .section -->
 
-    </footer> <!-- .section -->
-
-</body></html>
+</body>
+</html>
