@@ -3,7 +3,7 @@
  *
  * Author: Bruce Taylor
  * URL: brucetaylor.xyz
- * Date: 08/11/2014
+ * Date: 31/12/2015
  * License: MIT License, Open source
  */
 /*global document, console, window  */

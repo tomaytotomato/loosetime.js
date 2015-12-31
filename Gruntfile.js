@@ -14,7 +14,7 @@ module.exports = function (grunt) {
             },
             custom_options: {
                 options: {
-                    banner: '/*! <%= pkg.name %> <%= pkg.license %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+                    banner: '/*! <%= pkg.name %> <%= pkg.license %> <%= pkg.author %> <%= "brucetaylor.xyz" %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
                 }
             },
             dist: {
