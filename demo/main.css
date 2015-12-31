@@ -1024,6 +1024,8 @@ input[type=search] {
 .groupset__item {
   display: inline-block;
   vertical-align: top;
+  padding: 0 0 0 0;
+  margin-right: 5%;
 }
 .groupset__item--spaced {
   margin-right: 1em;

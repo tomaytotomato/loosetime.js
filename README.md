@@ -51,4 +51,4 @@ MIT License
 
 ## Contact
 
-loosebruce.co.uk
+brucetaylor.xyz
